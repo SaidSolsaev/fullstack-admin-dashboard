@@ -23,7 +23,7 @@ const Card = styled.div`
 const ProductImageContainer = styled.div`
     position: relative;
     overflow: hidden;
-    height: 230px;
+    height: 180px;
 `;
 
 const ProductAction = styled.div`
@@ -59,7 +59,7 @@ const ProductInfoContainer = styled.div`
 
 const ProductImage = styled.img`
     max-width: 100%;
-    height: 230px;
+    height: 180px;
     border-radius: 5px;
     transition: opacity 0.3s ease-in-out;
 `;

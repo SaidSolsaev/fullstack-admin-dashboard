@@ -1,20 +1,11 @@
-import { ThemeProvider, createTheme } from '@mui/material';
-import MainScreen from './pages/mainscreen/MainScreen';
+import AppRoutes from './AppRoutes';
 
-const theme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#333'
-    }
-  }
-})
 
 function App() {
 
   return (
     <div>
-      <MainScreen />
+      <AppRoutes />
     </div>
   );
 }

@@ -1,16 +1,17 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import { useNavigate } from 'react-router-dom';
 
 const SidebarContainer = styled.div`
     width: ${props => (props.open ? "200px" : "50px")};
-    height: 100vh;
+    min-height: 100vh;
     background-color: #1e2025;
     transition: width 0.5s;
     position: fixed;
-    z-index: 99999;
+    z-index: 1;
     top: 4rem;
     left: 0;
 `;
@@ -40,7 +41,10 @@ const ItemText = styled.span`
 `;
 
 
-const Sidebar = ({handleSidebarToggle, open}) => {
+const Sidebar = ({open}) => {
+    const navigate = useNavigate();
+
+
     
     
     return (
@@ -52,7 +56,7 @@ const Sidebar = ({handleSidebarToggle, open}) => {
                     <ItemText open={open}>Dashboard</ItemText>
                 </SidebarItem>
                 
-                <SidebarItem>
+                <SidebarItem onClick={() => navigate("/products")}>
                     <ShoppingBasketIcon />
                     <ItemText open={open}>Products</ItemText>
                 </SidebarItem>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import MenuIcon from '@mui/icons-material/Menu';
 // import LoginIcon from '@mui/icons-material/Login';
@@ -54,12 +54,7 @@ const UserContainer = styled.div`
     font-size: 16px;
 `;
 
-const LoginButton = styled.button`
-    background: none;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-`;
+
 
 const Navbar = ({handleSidebarToggle}) => {
 

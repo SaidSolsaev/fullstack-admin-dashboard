@@ -1,17 +1,16 @@
 import React from 'react'
 import styled from 'styled-components';
 
-const PageContent = styled.main`
-    margin-left: ${props => (props.open ? '200px' : '50px')};
+const PageContent = styled.div`
     transition: margin-left 0.5s;
     padding: 1rem;
 `;
 
-const Dashboard = ({open}) => {
+const Dashboard = () => {
     
     
     return (
-        <PageContent open={open}>
+        <PageContent>
             <div>Dashboard</div>
         </PageContent>
     )
